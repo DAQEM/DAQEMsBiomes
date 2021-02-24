@@ -1,12 +1,13 @@
-package net.daqem.daqemsbiomes.biomes;
+package net.daqem.daqemsbiomes.common.biome.overworld;
 
+import net.daqem.daqemsbiomes.init.ModFeatures;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 
-import static net.daqem.daqemsbiomes.util.SkyColorGenerator.getSkyColorWithTemperatureModifier;
+import static net.daqem.daqemsbiomes.common.util.SkyColorGenerator.getSkyColorWithTemperatureModifier;
 
 public class CherryBlossomForest {
 
@@ -22,7 +23,7 @@ public class CherryBlossomForest {
         DefaultBiomeFeatures.withCommonOverworldBlocks(biomeGenerationSettings$builder);
         DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings$builder);
         DefaultBiomeFeatures.withDisks(biomeGenerationSettings$builder);
-        biomeGenerationSettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.FOREST_FLOWER_TREES);
+        biomeGenerationSettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.Configs.CHERRY_FOREST_TREES);
         biomeGenerationSettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.FLOWER_FOREST);
         DefaultBiomeFeatures.withBadlandsGrass(biomeGenerationSettings$builder);
         DefaultBiomeFeatures.withNormalMushroomGeneration(biomeGenerationSettings$builder);

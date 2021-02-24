@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "daqemsbiomes:block/cherry_blossom_leaves"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "daqemsbiomes:block/cherry_blossom_sapling"
+  }
+}

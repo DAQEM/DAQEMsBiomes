@@ -3,8 +3,8 @@ package net.daqem.daqemsbiomes.init;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import net.daqem.daqemsbiomes.DAQEMsBiomes;
-import net.daqem.daqemsbiomes.biomes.CherryBlossomForest;
-import net.daqem.daqemsbiomes.world.ModWorldType;
+import net.daqem.daqemsbiomes.common.biome.overworld.CherryBlossomForest;
+//import net.daqem.daqemsbiomes.common.world.ModWorldType;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
@@ -28,7 +28,7 @@ public class ModBiomes {
 
     public static Multimap<Integer, WeightedSubBiome> subBiomes = HashMultimap.create();
 
-    public static ModWorldType worldType = new ModWorldType();
+//    public static ModWorldType worldType = new ModWorldType();
 
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, DAQEMsBiomes.MOD_ID);
 
@@ -36,8 +36,8 @@ public class ModBiomes {
 
     public static void setup() {
 
-        worldType.setRegistryName(new ResourceLocation("daqemsbiomes"));
-        ForgeRegistries.WORLD_TYPES.register(worldType);
+//        worldType.setRegistryName(new ResourceLocation("daqemsbiomes"));
+//        ForgeRegistries.WORLD_TYPES.register(worldType);
     }
 
     @SubscribeEvent

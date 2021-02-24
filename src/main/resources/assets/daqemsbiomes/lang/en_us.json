@@ -1,4 +1,9 @@
 {
   "biome.daqemsbiomes.cherry_blossom_forest": "DAQEM's Cherry Blossom Forest",
-  "generator.minecraft.daqemsbiomes": "DAQEM's Biomes"
+
+  "block.daqemsbiomes.cherry_blossom_leaves": "Cherry Blossom Leaves",
+
+  "generator.minecraft.daqemsbiomes": "DAQEM's Biomes",
+
+  "itemGroup.daqemsbiomesTab": "DAQEM's Biomes"
 }

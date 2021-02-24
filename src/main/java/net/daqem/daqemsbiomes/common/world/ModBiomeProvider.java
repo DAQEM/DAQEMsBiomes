@@ -1,9 +1,9 @@
-//package net.daqem.daqemsbiomes.world;
+//package net.daqem.daqemsbiomes.common.world;
 //
 //import com.google.common.collect.ImmutableList;
 //import com.mojang.serialization.Codec;
 //import com.mojang.serialization.codecs.RecordCodecBuilder;
-//import net.daqem.daqemsbiomes.util.ModClimates;
+//import net.daqem.daqemsbiomes.common.util.ModClimates;
 //import net.minecraft.util.RegistryKey;
 //import net.minecraft.util.registry.Registry;
 //import net.minecraft.util.registry.RegistryLookupCodec;

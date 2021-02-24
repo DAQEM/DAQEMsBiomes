@@ -1,4 +1,4 @@
-package net.daqem.daqemsbiomes.util;
+package net.daqem.daqemsbiomes.common.util;
 
 import net.minecraft.util.math.MathHelper;
 

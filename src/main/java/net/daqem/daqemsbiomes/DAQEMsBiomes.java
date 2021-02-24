@@ -1,14 +1,21 @@
 package net.daqem.daqemsbiomes;
 
+import net.daqem.daqemsbiomes.common.util.VanillaCompatibility;
 import net.daqem.daqemsbiomes.init.ModBiomes;
+import net.daqem.daqemsbiomes.init.ModBlocks;
+import net.daqem.daqemsbiomes.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IItemProvider;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -32,10 +39,11 @@ public class DAQEMsBiomes {
     public DAQEMsBiomes() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        DistExecutor.runWhenOn(Dist.CLIENT, () -> () ->
-                modEventBus.addListener(EventPriority.LOWEST, this::doClientStuff));
+        DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> modEventBus.addListener(EventPriority.LOWEST, this::doClientStuff));
         modEventBus.addListener(EventPriority.LOWEST, this::setup);
 
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
         ModBiomes.BIOMES.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -50,5 +58,13 @@ public class DAQEMsBiomes {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        DeferredWorkQueue.runLater(VanillaCompatibility::setupVanillaCompatibility);
+    }
 
-    }}
+    public static final ItemGroup TAB = new ItemGroup("daqemsbiomesTab") {
+
+        public ItemStack createIcon() {
+            return new ItemStack(ModItems.LOGO.get());
+        }
+    };
+}
