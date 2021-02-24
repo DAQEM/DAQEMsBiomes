@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="The Unlicense"
+
+[[mods]]
+modId="daqemsbiomes"
+version="${file.jarVersion}"
+displayName="DAQEM's Biomes"
+#updateJSONURL="http://myurl.me/" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/daqems-biomes" #optional
+#logoFile="examplemod.png" #optional
+credits="My thanks go to jayhillyt for inspiring me. Go check out his mod called Mystic's Biomes" #optional
+authors="DAQEM" #optional
+description='''
+    Compacts certain vanilla blocks.
+    '''
+
+[[dependencies.tutorial]]
+modId="forge"
+mandatory=true
+versionRange="[36,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.tutorial]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.5, 1.17)"
+ordering="NONE"
+side="BOTH"
