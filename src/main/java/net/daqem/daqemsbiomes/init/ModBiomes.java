@@ -26,24 +26,24 @@ import java.util.Objects;
 @Mod.EventBusSubscriber(modid = DAQEMsBiomes.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBiomes {
 
-    public static Multimap<Integer, WeightedSubBiome> subBiomes = HashMultimap.create();
-
-//    public static ModWorldType worldType = new ModWorldType();
-
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, DAQEMsBiomes.MOD_ID);
 
     public static final RegistryObject<Biome> CHERRY_BLOSSOM_FORREST = BIOMES.register("cherry_blossom_forest", CherryBlossomForest::makeCherryBlossomForest);
 
-    public static void setup() {
-
-//        worldType.setRegistryName(new ResourceLocation("daqemsbiomes"));
-//        ForgeRegistries.WORLD_TYPES.register(worldType);
-    }
+    //TODO Autumn forest (With different colors of red/orange leaves) (foxes) (autumn maple tree maybe oak logs)
+    //TODO Arctic Taiga (white leaves) (white foxed and and dogs)
+    //TODO Redwood forest
+    //TODO Tropical islands
+    //TODO Canyon
+    //TODO Red Desert (child of desert)
+    //TODO Better hills and mountains
+    //TODO Tropical biome
+    //TODO Mixed forest (maple, ash, Poplar, Oak, Birch)
 
     @SubscribeEvent
     public static void registerBiomes(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            setupBiome(CHERRY_BLOSSOM_FORREST.get(), BiomeManager.BiomeType.WARM, 100, BiomeDictionary.Type.RARE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.OVERWORLD);
+            setupBiome(CHERRY_BLOSSOM_FORREST.get(), BiomeManager.BiomeType.WARM, 10000/*TODO Change before release*/, BiomeDictionary.Type.RARE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.OVERWORLD);
         });
         Logger gameDataLogger = (Logger) LogManager.getLogger(GameData.class);
         gameDataLogger.setLevel(Level.OFF);
@@ -56,19 +56,5 @@ public class ModBiomes {
 
     public static RegistryKey<Biome> key(Biome biome) {
         return RegistryKey.getOrCreateKey(ForgeRegistries.Keys.BIOMES, Objects.requireNonNull(ForgeRegistries.BIOMES.getKey(biome), "Biome registry name was null"));
-    }
-
-    public static class WeightedSubBiome
-    {
-        public final RegistryKey<Biome> biome;
-        public final float rarity;
-        public final int weight;
-
-        public WeightedSubBiome(RegistryKey<Biome> biome, float rarity, int weight)
-        {
-            this.biome = biome;
-            this.rarity = rarity;
-            this.weight = weight;
-        }
     }
 }

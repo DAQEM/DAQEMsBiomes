@@ -1,4 +1,4 @@
-package net.daqem.daqemsbiomes.common.util;
+package net.daqem.daqemsbiomes.client;
 
 import net.daqem.daqemsbiomes.init.ModBlocks;
 import net.minecraft.client.renderer.RenderType;
