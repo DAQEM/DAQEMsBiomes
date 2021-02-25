@@ -40,10 +40,13 @@ public class DAQEMsBiomes {
 
     private void setup(final FMLCommonSetupEvent event) {
         ModBiomes.registerBiomes(event);
+        LOGGER.info("Common Stuff Done!");
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         DeferredWorkQueue.runLater(VanillaCompatibility::setupVanillaCompatibility);
+        LOGGER.info("Client Stuff Done!");
     }
 
     public static final ItemGroup TAB = new ItemGroup("daqemsbiomesTab") {
