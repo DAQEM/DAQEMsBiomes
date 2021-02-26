@@ -17,7 +17,7 @@ public class ModItems {
     public static final RegistryObject<Item> CHERRY_BLOSSOM_SAPLING = ITEMS.register("cherry_blossom_sapling", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_SAPLING.get()));
 
     // LOGS
-    public static final RegistryObject<Item> CHERRY_BLOSSOM_LOG = ITEMS.register("cherry_blossom_log", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_LOG.get()));
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_LOGS = ITEMS.register("cherry_blossom_logs", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_LOGS.get()));
 
     // PLANKS
     public static final RegistryObject<Item> CHERRY_BLOSSOM_PLANKS = ITEMS.register("cherry_blossom_planks", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_PLANKS.get()));

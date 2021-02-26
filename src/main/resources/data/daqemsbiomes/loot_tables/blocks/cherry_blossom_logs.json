@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "daqemsbiomes:cherry_blossom_log"
+          "name": "daqemsbiomes:cherry_blossom_logs"
         }
       ],
       "conditions": [

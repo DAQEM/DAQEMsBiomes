@@ -33,7 +33,7 @@ public class ModBlocks {
             new SaplingBlock(new CherryBlossomTree(), AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().zeroHardnessAndResistance().sound(SoundType.PLANT)));
 
     //LOGS
-    public static final RegistryObject<Block> CHERRY_BLOSSOM_LOG = register("cherry_blossom_log", () ->
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_LOGS = register("cherry_blossom_logs", () ->
             new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
 
     // PLANKS

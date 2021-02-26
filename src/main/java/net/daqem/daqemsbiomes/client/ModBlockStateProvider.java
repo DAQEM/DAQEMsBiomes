@@ -25,7 +25,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.CHERRY_BLOSSOM_SAPLING.get(), models().cross("cherry_blossom_sapling", modLoc("block/cherry_blossom_sapling")));
 
         // LOGS
-        logBlock((RotatedPillarBlock) ModBlocks.CHERRY_BLOSSOM_LOG.get());
+        logBlock((RotatedPillarBlock) ModBlocks.CHERRY_BLOSSOM_LOGS.get());
 
         // PLANKS
         simpleBlock(ModBlocks.CHERRY_BLOSSOM_PLANKS.get());

@@ -49,7 +49,7 @@ public class DAQEMsBiomes {
         LOGGER.info("Client Stuff Done!");
     }
 
-    public static final ItemGroup TAB = new ItemGroup("daqemsbiomesTab") {
+    public static final ItemGroup TAB = new ItemGroup("daqemsbiomestab") {
         public ItemStack createIcon() {
             return new ItemStack(ModItems.LOGO.get());
         }
