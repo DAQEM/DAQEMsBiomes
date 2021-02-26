@@ -43,7 +43,7 @@ public class ModBiomes {
     @SubscribeEvent
     public static void registerBiomes(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            setupBiome(CHERRY_BLOSSOM_FORREST.get(), BiomeManager.BiomeType.WARM, 10000/*TODO Change before release*/, BiomeDictionary.Type.RARE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.OVERWORLD);
+            setupBiome(CHERRY_BLOSSOM_FORREST.get(), BiomeManager.BiomeType.WARM, 10, BiomeDictionary.Type.RARE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.OVERWORLD);
         });
         Logger gameDataLogger = (Logger) LogManager.getLogger(GameData.class);
         gameDataLogger.setLevel(Level.OFF);

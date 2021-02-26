@@ -25,6 +25,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         // LEAVES
         cubeAll("cherry_blossom_leaves", modLoc("block/cherry_blossom_leaves"));
 
+        // LOGS
+        cubeBottomTop("cherry_blossom_log", modLoc("block/cherry_blossom_log"), modLoc("block/cherry_blossom_log_top"), modLoc("block/cherry_blossom_log_top"));
+
+        // PLANKS
+        cubeAll("cherry_blossom_planks", modLoc("block/cherry_blossom_planks"));
 
         //█████ █████ █████ █   █ █████
         //  █     █   █     ██ ██ █

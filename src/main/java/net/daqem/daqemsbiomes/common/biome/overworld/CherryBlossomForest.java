@@ -41,6 +41,7 @@ public class CherryBlossomForest {
                         .setWaterColor(4159204)
                         .setWaterFogColor(329011)
                         .setFogColor(12638463)
+                        .withGrassColor(6080605)
                         .withSkyColor(getSkyColorWithTemperatureModifier(0.7F))
                         .setMoodSound(MoodSoundAmbience.DEFAULT_CAVE)
                         .build())

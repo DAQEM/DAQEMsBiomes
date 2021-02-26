@@ -4,9 +4,11 @@ import net.daqem.daqemsbiomes.DAQEMsBiomes;
 import net.daqem.daqemsbiomes.common.block.tree.CherryBlossomTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.Direction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -28,8 +30,15 @@ public class ModBlocks {
 
     //SAPLINGS
     public static final RegistryObject<Block> CHERRY_BLOSSOM_SAPLING = register("cherry_blossom_sapling", () ->
-            new SaplingBlock(new CherryBlossomTree(), AbstractBlock.Properties.create(Blocks.OAK_SAPLING.getDefaultState().getMaterial())));
+            new SaplingBlock(new CherryBlossomTree(), AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().zeroHardnessAndResistance().sound(SoundType.PLANT)));
 
+    //LOGS
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_LOG = register("cherry_blossom_log", () ->
+            new RotatedPillarBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+
+    // PLANKS
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_PLANKS = register("cherry_blossom_planks", () ->
+            new Block(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)));
 
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {

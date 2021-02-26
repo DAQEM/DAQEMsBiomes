@@ -10,8 +10,18 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "daqemsbiomes");
 
+    // LEAVES
     public static final RegistryObject<Item> CHERRY_BLOSSOM_LEAVES = ITEMS.register("cherry_blossom_leaves", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_LEAVES.get()));
+
+    // SAPLINGS
     public static final RegistryObject<Item> CHERRY_BLOSSOM_SAPLING = ITEMS.register("cherry_blossom_sapling", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_SAPLING.get()));
 
+    // LOGS
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_LOG = ITEMS.register("cherry_blossom_log", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_LOG.get()));
+
+    // PLANKS
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_PLANKS = ITEMS.register("cherry_blossom_planks", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_PLANKS.get()));
+
+    //OTHER
     public static final RegistryObject<Item> LOGO = ITEMS.register("logo", () -> new Item(new Item.Properties()));
 }
