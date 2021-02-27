@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "daqemsbiomes:block/cherry_blossom_slab_top"
+    },
+    "type=bottom": {
+      "model": "daqemsbiomes:block/cherry_blossom_slab"
+    },
+    "type=double": {
+      "model": "daqemsbiomes:block/cherry_blossom_planks"
+    }
+  }
+}

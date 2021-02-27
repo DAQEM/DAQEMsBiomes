@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "daqemsbiomes:block/cherry_blossom_planks",
+    "bottom": "daqemsbiomes:block/cherry_blossom_planks",
+    "top": "daqemsbiomes:block/cherry_blossom_planks"
+  }
+}
