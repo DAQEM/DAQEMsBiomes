@@ -28,17 +28,34 @@ public class ModRecipeProvider extends ForgeRecipeProvider {
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
 
-        // SHAPED
-        ShapedRecipeBuilder.shapedRecipe(Items.CRAFTING_TABLE.getItem())
+        // CRAFTING TABLE
+        ShapedRecipeBuilder.shapedRecipe(Items.CRAFTING_TABLE.getItem(), 1)
                 .patternLine("XX")
                 .patternLine("XX")
                 .key('X', ModItems.CHERRY_BLOSSOM_PLANKS.get())
                 .addCriterion("cherry_blossom_planks", InventoryChangeTrigger.Instance.forItems(ModItems.CHERRY_BLOSSOM_PLANKS.get()))
                 .build(consumer);
 
-        ShapedRecipeBuilder.shapedRecipe(Items.STICK.getItem())
+        // STICKS
+        ShapedRecipeBuilder.shapedRecipe(Items.STICK.getItem(), 4)
                 .patternLine("X")
                 .patternLine("X")
+                .key('X', ModItems.CHERRY_BLOSSOM_PLANKS.get())
+                .addCriterion("cherry_blossom_planks", InventoryChangeTrigger.Instance.forItems(ModItems.CHERRY_BLOSSOM_PLANKS.get()))
+                .build(consumer);
+
+        // SLABS
+        ShapedRecipeBuilder.shapedRecipe(ModItems.CHERRY_BLOSSOM_SLAB.get(), 6)
+                .patternLine("XXX")
+                .key('X', ModItems.CHERRY_BLOSSOM_PLANKS.get())
+                .addCriterion("cherry_blossom_planks", InventoryChangeTrigger.Instance.forItems(ModItems.CHERRY_BLOSSOM_PLANKS.get()))
+                .build(consumer);
+
+        // STAIRS
+        ShapedRecipeBuilder.shapedRecipe(ModItems.CHERRY_BLOSSOM_STAIRS.get(), 4)
+                .patternLine("X  ")
+                .patternLine("XX ")
+                .patternLine("XXX")
                 .key('X', ModItems.CHERRY_BLOSSOM_PLANKS.get())
                 .addCriterion("cherry_blossom_planks", InventoryChangeTrigger.Instance.forItems(ModItems.CHERRY_BLOSSOM_PLANKS.get()))
                 .build(consumer);

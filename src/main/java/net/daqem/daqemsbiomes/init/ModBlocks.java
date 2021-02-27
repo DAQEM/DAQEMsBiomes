@@ -8,10 +8,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Direction;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -41,9 +38,12 @@ public class ModBlocks {
             new Block(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     // STAIRS
-
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_STAIRS = register("cherry_blossom_stairs", () ->
+            new StairsBlock(CHERRY_BLOSSOM_PLANKS.get().getDefaultState(), AbstractBlock.Properties.from(CHERRY_BLOSSOM_PLANKS.get())));
 
     // SLABS
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_SLAB = register("cherry_blossom_slab", () ->
+            new SlabBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)));
 
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {

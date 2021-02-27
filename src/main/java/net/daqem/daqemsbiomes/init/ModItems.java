@@ -22,6 +22,12 @@ public class ModItems {
     // PLANKS
     public static final RegistryObject<Item> CHERRY_BLOSSOM_PLANKS = ITEMS.register("cherry_blossom_planks", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_PLANKS.get()));
 
+    // STAIRS
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_STAIRS = ITEMS.register("cherry_blossom_stairs", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_STAIRS.get()));
+
+    // SLABS
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_SLAB = ITEMS.register("cherry_blossom_slab", () -> new BlockItemBase(ModBlocks.CHERRY_BLOSSOM_SLAB.get()));
+
     //OTHER
     public static final RegistryObject<Item> LOGO = ITEMS.register("logo", () -> new Item(new Item.Properties()));
 }

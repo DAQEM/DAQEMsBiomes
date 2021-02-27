@@ -56,6 +56,8 @@ public class ModLootTableProvider implements IDataProvider {
         registerDropSelfLootTable(ModBlocks.CHERRY_BLOSSOM_SAPLING.get());
         registerDropSelfLootTable(ModBlocks.CHERRY_BLOSSOM_LOGS.get());
         registerDropSelfLootTable(ModBlocks.CHERRY_BLOSSOM_PLANKS.get());
+        registerDropSelfLootTable(ModBlocks.CHERRY_BLOSSOM_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.CHERRY_BLOSSOM_SLAB.get());
 
         registerLootTable(ModBlocks.CHERRY_BLOSSOM_LEAVES.get(), (leaves) ->
                 droppingWithChancesAndSticks(leaves, ModBlocks.CHERRY_BLOSSOM_SAPLING.get(), DEFAULT_SAPLING_DROP_RATES));

@@ -4,6 +4,8 @@ import net.daqem.daqemsbiomes.DAQEMsBiomes;
 import net.daqem.daqemsbiomes.init.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RotatedPillarBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -29,5 +31,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         // PLANKS
         simpleBlock(ModBlocks.CHERRY_BLOSSOM_PLANKS.get());
+
+        // STAIRS
+        stairsBlock((StairsBlock) ModBlocks.CHERRY_BLOSSOM_STAIRS.get(), modLoc("block/cherry_blossom_planks"));
+
+        // SLAB
+        slabBlock((SlabBlock) ModBlocks.CHERRY_BLOSSOM_SLAB.get(), modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"));
     }
 }

@@ -31,6 +31,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         // PLANKS
         cubeAll("cherry_blossom_planks", modLoc("block/cherry_blossom_planks"));
 
+        // STAIRS
+        stairs("cherry_blossom_stairs", modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"));
+        stairsInner("cherry_blossom_stairs_inner", modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"));
+        stairsOuter("cherry_blossom_stairs_outer", modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"));
+
+        // SLABS
+        slab("cherry_blossom_slab", modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"));
+        slabTop("cherry_blossom_slab_top", modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"), modLoc("block/cherry_blossom_planks"));
+
+
         //█████ █████ █████ █   █ █████
         //  █     █   █     ██ ██ █
         //  █     █   ████  █ █ █ █████
