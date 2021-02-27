@@ -27,6 +27,8 @@ public class ModRecipeProvider extends ForgeRecipeProvider {
 
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
+
+        // SHAPED
         ShapedRecipeBuilder.shapedRecipe(Items.CRAFTING_TABLE.getItem())
                 .patternLine("XX")
                 .patternLine("XX")
@@ -34,9 +36,18 @@ public class ModRecipeProvider extends ForgeRecipeProvider {
                 .addCriterion("cherry_blossom_planks", InventoryChangeTrigger.Instance.forItems(ModItems.CHERRY_BLOSSOM_PLANKS.get()))
                 .build(consumer);
 
+        ShapedRecipeBuilder.shapedRecipe(Items.STICK.getItem())
+                .patternLine("X")
+                .patternLine("X")
+                .key('X', ModItems.CHERRY_BLOSSOM_PLANKS.get())
+                .addCriterion("cherry_blossom_planks", InventoryChangeTrigger.Instance.forItems(ModItems.CHERRY_BLOSSOM_PLANKS.get()))
+                .build(consumer);
+
+        // SHAPELESS
         ShapelessRecipeBuilder.shapelessRecipe(ModItems.CHERRY_BLOSSOM_PLANKS.get(), 4)
                 .addIngredient(ModItems.CHERRY_BLOSSOM_LOGS.get())
                 .addCriterion("cherry_blossom_logs", InventoryChangeTrigger.Instance.forItems(ModItems.CHERRY_BLOSSOM_LOGS.get()))
                 .build(consumer);
+
     }
 }

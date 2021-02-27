@@ -40,6 +40,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHERRY_BLOSSOM_PLANKS = register("cherry_blossom_planks", () ->
             new Block(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)));
 
+    // STAIRS
+
+
+    // SLABS
+
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
         RegistryObject<T> ret = registerNoItem(name, block);
