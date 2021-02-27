@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "daqemsbiomes:block/cherry_blossom_logs_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "daqemsbiomes:block/cherry_blossom_logs"
+    },
+    "axis=z": {
+      "model": "daqemsbiomes:block/cherry_blossom_logs_horizontal",
+      "x": 90
+    }
+  }
+}

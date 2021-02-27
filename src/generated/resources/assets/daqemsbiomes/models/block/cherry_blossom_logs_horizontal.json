@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "side": "daqemsbiomes:block/cherry_blossom_logs",
+    "end": "daqemsbiomes:block/cherry_blossom_logs_top"
+  }
+}

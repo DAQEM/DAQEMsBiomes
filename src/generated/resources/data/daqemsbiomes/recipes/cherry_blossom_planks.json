@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "daqemsbiomes:cherry_blossom_logs"
+    }
+  ],
+  "result": {
+    "item": "daqemsbiomes:cherry_blossom_planks",
+    "count": 4
+  }
+}
